@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Registro de Biblioteca</title>
+    <!--VÍNCULO-->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!--DIV PRINCIPAL-->
+    <div class="container">
+        <h1>Registro de Biblioteca</h1>
+        
+        <!--COLETA DADOS -->
+        <form id="libraryForm">
+            <div class="input-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="livro">Nome do Livro:</label>
+                <input type="text" id="livro" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="usuario">Você É:</label>
+                <select id="usuario"> 
+                    <option value="aluno">Aluno</option> 
+                    <option value="servidor">Servidor</option> 
+                </select>
+            </div>
+            
+            <button type="button" id="registrabot">Registrar</button>
+            
+            <button type="button" id="temas">Tema Escuro</button>
+        </form>
+        
+        <!--DIV COMPROVANTE-->
+        <div id="comprov"></div>
+    </div>
+    
+    <!--VÍNCULO JS-->
+    <script src="dist/script.js" type="module"></script>
+</body>
+</html>

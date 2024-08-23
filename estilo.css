@@ -1,0 +1,86 @@
+body {
+    font-family: Monaco, 'Courier New', Courier, monospace; 
+    background: linear-gradient(to right, purple, blue); /*FUNDO COM GRADIENTE DE ROXO PARA AZUL */
+    color: Black; /*COR DO TEXTO EM PRETO */
+    display: flex; /*FLEXBOX PARA ALINHAR*/
+    justify-content: center; /*CENTRALIZA HORI*/
+    align-items: center; /* CENTRALIZA VERT */
+    height: 100vh; 
+    margin: 0;
+    transition: background 0.5s ease, color 0.5s ease; /*SIMPLES MUDANÇA DE FUNDO*/
+}
+
+/*PARTE PRINCIPAL */
+.container {
+    display: flex; 
+    flex-direction: column; /*COLUNA DIRECIONADA*/
+    align-items: center;
+    width: 90%; 
+    max-width: 300px; 
+    text-align: center; 
+}
+
+/* ENTRADA*/
+.input-group {
+    margin-bottom: 15px;
+}
+
+/*CAMPOS DE ENTRADA*/
+input, select {
+    width: 100%; /* LARGURA TOTAL DO CAMPO É 100% DO CONTÊINER */
+    padding: 8px; /* ESPAÇO INTERNO NOS CAMPOS */
+    margin-top: 5px; /* ESPAÇO ACIMA DOS CAMPOS */
+    border-radius: 5px; /* BORDAS ARREDONDADAS */
+    border: 1px solid #ccc; /* BORDAS CINZA CLARO */
+}
+
+/*CASO NÃO PREENCHIDA*/
+input.error, select.error {
+    border: 2px solid red; 
+}
+
+/*COMPROVANTE*/
+#receipt {
+    margin-top: 20px; /*ACIMA DA CAIXA*/
+    background: azure; /* FUNDO SEMI-TRANSPARENTE BRANCO */
+    padding: 10px; 
+    border-radius: 10px;
+}
+
+/*DARK MODO*/
+.dark-mode {
+    background: linear-gradient(to right, Gray, Black); 
+    color: azure; 
+}
+
+/*BOTÕES*/
+button {
+    padding: 10px; 
+    border: none;
+    border-radius: 5px;
+    background-color: Black;
+    color: white; 
+    cursor: pointer; 
+    margin-top: 10px;
+}
+
+/*ESTILO DO BOTÃO AO PASSAR O MOUSE SOBRE ELE */
+button:hover {
+    background-color: BlueViolet; /*COR DE FUNDO AZUL ESCURO AO PASSAR O MOUSE */
+}
+
+/*ADAPTAÇÃO TELA*/
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        max-width: none;
+    }
+
+    input, select {
+        padding: 12px; /*AUMENTO CAMPOS*/
+    }
+
+    button {
+        padding: 12px; /*AUMENTA BOTÃO (ESPAÇO INTERNO)*/
+    }
+}
